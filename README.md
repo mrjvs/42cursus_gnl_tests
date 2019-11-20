@@ -6,5 +6,5 @@ specify your get_next_line folder in the `Makefile`
 
 ```sh
 make # runs all tests
-make buf1 # runs test named buf1 
+make buf1 # runs test named buf1, see Makefile for all tests
 ```
