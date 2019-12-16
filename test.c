@@ -46,6 +46,8 @@ void	testmultiple(int fd, int fd2)
 	doprint(get_next_line(fd, &st), &st, i++);
 	doprint(get_next_line(fd2, &st), &st, i2++);
 	doprint(get_next_line(fd2, &st), &st, i2++);
+	close(fd);
+	close(fd2);
 }
 
 void	test(int fd)
@@ -62,6 +64,7 @@ void	test(int fd)
 		out = get_next_line(fd, &st);
 		doprint(out, &st, i++);
 	}
+	close(fd);
 }
 
 int		main(int argc, char **argv)
