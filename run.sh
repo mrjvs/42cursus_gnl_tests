@@ -60,15 +60,17 @@ for FILE in $(ls $TEST_FOLDER); do
     fi
 done
 
-# bonus test
-printf "$MUTED* Running bonus - mixed files "$'\r'
-$1 "$TEST_BONUS_FOLDER/1.txt" "$TEST_BONUS_FOLDER/2.txt" > temp
-if diff "$ANSWER_BONUS_FOLDER/1.txt" temp > /dev/null; then
-    printf "$GREEN*$MUTED Passed bonus - mixed files "$'\n'
-else
-    FAILED=$(($FAILED + 1))
-    logToFile "$ANSWER_BONUS_FOLDER/1.txt" temp "bonus-mixedfiles"
-    printf "$RED*$MUTED Failed bonus - mixed files - Added to log"$'\n'
+if [ "$2" = "yes" ]; then
+    # bonus test
+    printf "$MUTED* Running bonus - mixed files "$'\r'
+    $1 "$TEST_BONUS_FOLDER/1.txt" "$TEST_BONUS_FOLDER/2.txt" > temp
+    if diff "$ANSWER_BONUS_FOLDER/1.txt" temp > /dev/null; then
+        printf "$GREEN*$MUTED Passed bonus - mixed files "$'\n'
+    else
+        FAILED=$(($FAILED + 1))
+        logToFile "$ANSWER_BONUS_FOLDER/1.txt" temp "bonus-mixedfiles"
+        printf "$RED*$MUTED Failed bonus - mixed files - Added to log"$'\n'
+    fi
 fi
 
 echo ""

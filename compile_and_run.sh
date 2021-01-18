@@ -57,7 +57,7 @@ for test_size in $BUF_SIZE_TESTS; do
     echo "-------------- BUFFER_SIZE=$test_size --------------"$'\n' >> log.txt
     # run test
     echo "$GREEN$BOLD>$RESET Running tests: $MUTED(BUFFER_SIZE=$test_size)$RESET"
-    ./run.sh $EXEC
+    ./run.sh $EXEC $BONUS
     TEMPFAIL="$?"
     FAILED=$(( $FAILED + $TEMPFAIL ))
     if [ $TEMPFAIL -eq 0 ]; then
