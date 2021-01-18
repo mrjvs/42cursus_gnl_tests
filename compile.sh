@@ -5,7 +5,7 @@
 # 2. includes folder
 # 3. files to compile
 
-CC=clang
+CC=gcc
 FLAGS=""
 BUFFER_SIZE_NAME="BUFFER_SIZE"
 
