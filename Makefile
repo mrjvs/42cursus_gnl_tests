@@ -10,3 +10,7 @@ BUF_SIZE_TESTS="1 2 5 6 20 25 1024 5000 10000000"
 
 all:
 	./compile_and_run.sh $(GET_NEXT_LINE_FOLDER) $(BONUS) $(BUF_SIZE_TESTS)
+
+# force bonus to yes
+bonus:
+	./compile_and_run.sh $(GET_NEXT_LINE_FOLDER) yes $(BUF_SIZE_TESTS)
