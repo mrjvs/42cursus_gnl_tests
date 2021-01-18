@@ -1,5 +1,6 @@
 # 42cursus_gnl_tests
 Unit tests for get next line, new subject!
+**Make an issue on github if you're having issues**
 
 ## how to use
 specify your get_next_line folder in the `Makefile`
