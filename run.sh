@@ -32,7 +32,7 @@ logToFile() {
 for FILE in $(ls $TEST_FOLDER); do
     # run normal test with file descriptor
     printf "$MUTED* Running fd-$FILE "$'\r'
-    $1 $TEST_FOLDER$FILE > temp
+    $1 "$TEST_FOLDER$FILE" > temp
 
     # check if wrong answer
     if diff "$ANSWER_FOLDER$FILE" temp > /dev/null; then
